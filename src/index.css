@@ -1,4 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-  
+
+#home {
+  background-image: url("dasar5.png");
+}
