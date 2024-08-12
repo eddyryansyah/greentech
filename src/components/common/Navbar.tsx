@@ -17,10 +17,10 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
     >
       <Logo />
       <div className="space-x-8">
-        <Button>Button 1</Button>
-        <Button>Button 2</Button>
-        <Button>Button 3</Button>
-        <Button>Button 4</Button>
+        <Button className="border border-black">Button 1</Button>
+        <Button className="border border-black">Button 2</Button>
+        <Button className="border border-black">Button 3</Button>
+        <Button className="border border-black">Button 4</Button>
       </div>
     </nav>
   );

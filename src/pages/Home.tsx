@@ -2,7 +2,10 @@ import Description from "@/components/common/Description";
 import Logo from "@/components/common/Logo";
 import Navbar from "@/components/common/Navbar";
 import Button from "@/components/common/Button";
-import Background from "./Background";
+import BackgroundSection from "../layout/BackgroundSection";
+import PlantSection from "../layout/PlantSection";
+import DownSection from "../layout/DownSection";
+import Footer from "../layout/Footer";
 
 const Home = () => {
   return (
@@ -23,7 +26,10 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Background />
+      <BackgroundSection />
+      <PlantSection />
+      <DownSection />
+      <Footer />
     </>
   );
 };
