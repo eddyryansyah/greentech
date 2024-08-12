@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/plant-t",
+  base: "/plant-t/",
   plugins: [react()],
   resolve: {
     alias: {
