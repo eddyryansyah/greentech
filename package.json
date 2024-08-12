@@ -1,6 +1,6 @@
 {
   "name": "plant-t",
-  "private": true,
+  "private": false,
   "homepage": "https://bayuara.github.io/plant-t",
   "version": "0.0.0",
   "type": "module",
