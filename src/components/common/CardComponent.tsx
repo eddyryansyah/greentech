@@ -1,25 +1,37 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import GApel from "../../assets/apel.jpg";
+import clsx from "clsx";
+import Button from "./Button";
 
-const CardComponent = () => {
+interface ICardComponent {
+  title?: string;
+  description?: string;
+  img?: string;
+  children?: React.ReactNode;
+  className?: string;
+}
+
+function CardComponent(props: ICardComponent) {
+  const { title, description, img, className, children } = props;
   return (
-    <Card className="bg-green-400">
+    <Card className={clsx("bg-white flex flex-col items-center", className)}>
       <CardHeader>
-        <CardTitle>Card Title</CardTitle>
-        <CardDescription>Card Description</CardDescription>
+        <img
+          src={img ? img : GApel}
+          alt="gambar"
+          className="shadow-black shadow-sm"
+        />
+        <CardTitle className="text-hitam text-center">
+          {title ? title : "Apel"}
+        </CardTitle>
       </CardHeader>
-      <CardContent>
-        <p>Card Content</p>
+      <CardContent className="text-hitam">
+        <p>{description ? description : "lorem ipsum"}</p>
+        <Button className="bg-hijau rounded-3xl drop-shadow-xl p-3 text-white mt-2">
+          Lebih Lanjut
+        </Button>
+        {children}
       </CardContent>
-      <CardFooter>
-        <p>Card Footer</p>
-      </CardFooter>
     </Card>
   );
 }

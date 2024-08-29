@@ -6,23 +6,25 @@ import BackgroundSection from "../layout/BackgroundSection";
 import PlantSection from "../layout/PlantSection";
 import DownSection from "../layout/DownSection";
 import Footer from "../layout/Footer";
+import LPImage from "../assets/landingpage-img.svg"
 
 const Home = () => {
   return (
     <>
       <div className="min-h-screen p-4 flex flex-col">
-        <Navbar />
-        <div className="flex-1 flex items-center">
+        <Navbar className="font-bold" />
+        <div className="flex-1 flex justify-evenly items-center">
           <div className="space-y-6 bg-slate-200 w-1/2 p-4">
-            <Logo showLabel />
+            <Logo className="text-8xl font-bold">
+              <span className="text-hijau">
+                Green<span className="text-hitam">Tech.</span>
+              </span>
+            </Logo>
             <Description />
             <Button>wkwkwk</Button>
           </div>
-          <div
-            className="absolute inset-y-0 right-0 z-[-1] w-1/2 bg-cover bg-no-repeat"
-            style={{ backgroundImage: "url('./BG.png')" }}
-          >
-            {/* Background image */}
+          <div className="relative bg-cover bg-no-repeat">
+            <img src={LPImage} alt="LandingPage" />
           </div>
         </div>
       </div>

@@ -1,3 +1,6 @@
+import Button from "@/components/common/Button";
+import ApelImage from "../assets/apel.jpg";
+
 const BackgroundSection = () => {
   return (
     <div className="h-auto bg-slate-50 p-12">
@@ -7,10 +10,10 @@ const BackgroundSection = () => {
           <div>wkwk</div>
           <div>wkwk</div>
           <div>wkwk</div>
-          <div className="mt-20">wkwk</div>
+          <Button className="mt-20">kwkwk</Button>
         </div>
         <div>
-          <img src="/icon.png" alt="" />
+          <img src={ApelImage} alt="gambar" />
           <div className="flex justify-between">
             <div>wkwk</div>
             <div>wkwk</div>
