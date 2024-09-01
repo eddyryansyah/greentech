@@ -8,6 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Background from "../assets/bg.png";
+import ellipse from "../assets/Ellipse.svg";
 
 const PlantSection = () => {
   const totalItems = 5;
@@ -17,8 +18,20 @@ const PlantSection = () => {
       className="h-auto bg-slate-50 p-12 bg-cover bg-no-repeat"
       style={{ backgroundImage: `url(${Background})` }}
     >
-      <div className="bg-blue-200 w-fit p-4">Tanaman/Buah</div>
-      <div className="bg-[#D0D0D0] flex flex-col items-start text-start mt-8 p-8 rounded-3xl">
+      {/* Top Section with Circular Element and Title */}
+      <div className="relative flex items-center justify-start">
+        {/* Circular Element */}
+        <div className="absolute left-0 top-0 w-24 h-24 bg-brown rounded-full ring-8 ring-white">
+          <img src={ellipse} alt="Circle" />
+        </div>
+        {/* Title */}
+        <h1 className="text-3xl font-bold text-start p-3 px-8 bg-[#D0D0D0] ml-20">
+          Jenis Tumbuhan
+        </h1>
+      </div>
+
+      {/* Existing Content */}
+      <div className="bg-[#D0D0D0] flex flex-col items-start text-start mt-4 p-8 pt-16 rounded-3xl">
         <div>
           Setelah memahami pentingnya tumbuhan dalam ekosistem dan peranannya
           dalam kehidupan manusia, kita dapat beralih ke topik yang lebih

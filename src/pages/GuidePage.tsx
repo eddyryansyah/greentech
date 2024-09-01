@@ -6,10 +6,14 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Background from "../assets/bg.png";
 
 const GuidePage = () => {
   return (
-    <div className="h-auto">
+    <div
+      className="h-auto bg-cover bg-no-repeat"
+      style={{ backgroundImage: `url(${Background})` }}
+    >
       <Navbar className="font-bold" />
       <div className="p-8">
         <Accordion

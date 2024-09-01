@@ -2,13 +2,14 @@ import React from "react";
 import clsx from "clsx";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  isActive?: boolean; // Custom prop
   type?: "button" | "submit" | "reset";
   rounded?: "none" | "sm" | "md" | "lg" | "xl" | "2xl" | "full";
   block?: boolean;
   variant?: "default" | "contained" | "danger" | "underlined" | "solid";
   to?: string;
   onClick?: () => void;
-  isActive?: boolean; // Custom prop
+  iconSuffix?: React.ReactNode;
 }
 
 const Button: React.FC<Partial<ButtonProps>> = ({
@@ -19,6 +20,7 @@ const Button: React.FC<Partial<ButtonProps>> = ({
   children,
   rounded = "none",
   block = false,
+  iconSuffix,
   isActive = false, // Custom prop
   ...OtherProps
 }) => {
@@ -34,7 +36,7 @@ const Button: React.FC<Partial<ButtonProps>> = ({
 
   const styles = {
     default: "font-bold",
-    contained: "bg-hijau text-white p-8 py-4",
+    contained: "bg-hijau text-white p-2",
     danger:
       "bg-merahNormal border border-merahNormal text-white hover:bg-putihNormalHover hover:text-hitamNormal focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2",
     disabled:
@@ -46,7 +48,7 @@ const Button: React.FC<Partial<ButtonProps>> = ({
   return (
     <button
       type={type}
-      className={clsx(
+      className={clsx("flex justify-center items-center gap-1",
         roundedStyles[rounded],
         styles[variant],
         {
@@ -59,6 +61,7 @@ const Button: React.FC<Partial<ButtonProps>> = ({
       {...OtherProps} // Spread remaining props except isActive
     >
       {children}
+      {iconSuffix ? <div>{iconSuffix}</div> : null}
     </button>
   );
 };

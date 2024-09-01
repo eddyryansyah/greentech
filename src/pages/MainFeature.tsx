@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import Button from "@/components/common/Button";
 import icChecklist from "../assets/ic-fi-bs-list-check.svg";
+import icAutomated from "../assets/ic-automated.svg";
 
 const MainFeature = () => {
   return (
@@ -26,8 +27,8 @@ const MainFeature = () => {
           <Card className="rounded-lg shadow-lg">
             <CardHeader className="flex flex-col items-center">
               <img
-                src={icChecklist}
-                alt="Checklist Icon"
+                src={icAutomated}
+                alt="OTOMATIS"
                 className="size-24 mb-4"
               />
               <CardTitle className="text-xl font-bold">OTOMATIS</CardTitle>
@@ -49,7 +50,7 @@ const MainFeature = () => {
             <CardHeader className="flex flex-col items-center">
               <img
                 src={icChecklist}
-                alt="Checklist Icon"
+                alt="MANUAL"
                 className="size-24 mb-4"
               />
               <CardTitle className="text-xl font-bold">MANUAL</CardTitle>

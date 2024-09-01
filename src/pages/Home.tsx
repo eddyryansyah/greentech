@@ -11,6 +11,7 @@ import LPImage from "../assets/landingpage-img.svg";
 import Background from "../assets/bg.png";
 import { useNavigate } from "react-router-dom";
 import { MAINFEATURE_URL } from "@/components/router";
+import { FaAngleRight } from "react-icons/fa6";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -22,21 +23,21 @@ const Home = () => {
       >
         <Navbar />
         <div className="flex-1 flex justify-evenly items-center p-4">
-          <div className="flex flex-col items-start text-start space-y-6 w-1/2 p-4">
+          <div className="flex flex-col items-start text-start w-1/2 p-4">
             <Logo className="text-8xl font-bold">
               <span className="text-hijau">
                 Green<span className="text-hitam">Tech.</span>
               </span>
             </Logo>
-            <Description>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ab
-              quo in.
+            <Description classname="font-bold text-lg mb-4">
+              “Menemukan Tanaman Ideal untuk Setiap Tanah!”
             </Description>
             <Button
               variant="contained"
               rounded="lg"
-              className="justify-start font-semibold"
+              className="justify-start font-semibold py-3 px-6"
               onClick={() => navigate(MAINFEATURE_URL)}
+              iconSuffix={<FaAngleRight className="size-4" />}
             >
               Mulai Sekarang!
             </Button>

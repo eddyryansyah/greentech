@@ -1,10 +1,14 @@
 import Button from "@/components/common/Button";
+import bgDownSection from "../assets/bg-downSection.png";
 
 const DownSection = () => {
   return (
     <>
-      <div className="p-4">
-        <h1 className="font-bold text-xl leading-snug">
+      <div
+        className="min-h-screen flex flex-col items-center justify-center p-4 bg-cover bg-no-repeat"
+        style={{ backgroundImage: `url(${bgDownSection})` }}
+      >
+        <h1 className="font-bold text-2xl leading-snug">
           <span className="bg-[#CB2828] px-1 rounded-md text-white">
             Jangan Biarkan
           </span>
@@ -14,7 +18,7 @@ const DownSection = () => {
           </span>{" "}
           Hobi Berkebun Anda!
         </h1>
-        <p className="font-bold text-sm my-4">
+        <p className="font-bold text-lg my-4 mb-10">
           Dengan aplikasi kami, Anda tidak perlu menjadi ahli untuk menjadi{" "}
           <span className="text-hijau">sukses</span> dalam berkebun.
         </p>
