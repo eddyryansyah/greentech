@@ -1,7 +1,11 @@
-const Description = () => {
-  return (
-    <div>Description</div>
-  )
+interface Iprops {
+  classname?: string;
+  children?: React.ReactNode;
 }
 
-export default Description
+const Description = (props: Iprops) => {
+  const { classname, children } = props;
+  return <div className={classname}>{children}</div>;
+};
+
+export default Description;

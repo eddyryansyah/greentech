@@ -1,9 +1,13 @@
 import Button from "@/components/common/Button";
 import ApelImage from "../assets/apel.jpg";
+import Background from "../assets/bg.png";
 
 const BackgroundSection = () => {
   return (
-    <div className="h-auto bg-slate-50 p-12">
+    <div
+      className="h-auto bg-slate-50 p-12 bg-cover bg-no-repeat"
+      style={{ backgroundImage: `url(${Background})` }}
+    >
       <div className="bg-blue-200 w-fit p-4">Latar Belakang</div>
       <div className="bg-yellow-300 flex justify-between items-center h-fit mt-8">
         <div className="p-6">

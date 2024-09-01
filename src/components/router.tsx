@@ -3,11 +3,13 @@ import DetailContent from "@/pages/DetailContent";
 import Home from "@/pages/Home";
 import GuidePage from "@/pages/GuidePage";
 import AboutPage from "@/pages/AboutPage";
+import MainFeature from "@/pages/MainFeature";
 
 export const BASE_URL = "/plant-t";
 export const DETAIL_URL = BASE_URL + "/detail";
 export const GUIDE_URL = BASE_URL + "/panduan";
 export const DEVELOP_URL = BASE_URL + "/pengembang";
+export const MAINFEATURE_URL = BASE_URL + "/feature";
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +24,10 @@ export const router = createBrowserRouter([
   {
     path: DEVELOP_URL,
     element: <AboutPage />,
+  },
+  {
+    path: MAINFEATURE_URL,
+    element: <MainFeature />
   },
 ]);
 

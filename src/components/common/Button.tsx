@@ -3,26 +3,25 @@ import clsx from "clsx";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   type?: "button" | "submit" | "reset";
-  rounded: "none" | "sm" | "md" | "lg" | "xl" | "2xl" | "full";
-  block: boolean;
-  variant?: "default" | "outline" | "danger" | "underlined" | "solid";
+  rounded?: "none" | "sm" | "md" | "lg" | "xl" | "2xl" | "full";
+  block?: boolean;
+  variant?: "default" | "contained" | "danger" | "underlined" | "solid";
   to?: string;
   onClick?: () => void;
-  isActive?: boolean;
+  isActive?: boolean; // Custom prop
 }
 
-const Button = (props: Partial<ButtonProps>) => {
-  const {
-    variant = "default",
-    onClick,
-    type = "submit",
-    className,
-    children,
-    rounded = "none",
-    block = false,
-    ...OtherProps
-  } = props;
-
+const Button: React.FC<Partial<ButtonProps>> = ({
+  variant = "default",
+  onClick,
+  type = "submit",
+  className,
+  children,
+  rounded = "none",
+  block = false,
+  isActive = false, // Custom prop
+  ...OtherProps
+}) => {
   const roundedStyles = {
     none: "rounded-none",
     sm: "rounded-sm",
@@ -35,8 +34,7 @@ const Button = (props: Partial<ButtonProps>) => {
 
   const styles = {
     default: "font-bold",
-    outline:
-      "bg-transparent border-2 border-hijauNormal text-hijauNormal hover:bg-hijauLightHover hover:text-hitamNormal focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 active:bg-hijauDarkHover active:text-whiteLightActive",
+    contained: "bg-hijau text-white p-8 py-4",
     danger:
       "bg-merahNormal border border-merahNormal text-white hover:bg-putihNormalHover hover:text-hitamNormal focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2",
     disabled:
@@ -53,11 +51,12 @@ const Button = (props: Partial<ButtonProps>) => {
         styles[variant],
         {
           "w-full": block,
+          "border-b-4 border-coklat": isActive && variant === "underlined",
         },
         className
       )}
       onClick={onClick}
-      {...OtherProps}
+      {...OtherProps} // Spread remaining props except isActive
     >
       {children}
     </button>

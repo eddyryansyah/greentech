@@ -7,12 +7,16 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Background from "../assets/bg.png";
 
 const PlantSection = () => {
   const totalItems = 5;
 
   return (
-    <div className="h-auto bg-slate-50 p-12">
+    <div
+      className="h-auto bg-slate-50 p-12 bg-cover bg-no-repeat"
+      style={{ backgroundImage: `url(${Background})` }}
+    >
       <div className="bg-blue-200 w-fit p-4">Tanaman/Buah</div>
       <div className="bg-[#D0D0D0] flex flex-col items-start text-start mt-8 p-8 rounded-3xl">
         <div>
@@ -45,8 +49,8 @@ const PlantSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious className="h-12 bg-[#EFEFEF] hover:bg-[#3D5AF1]" />
+            <CarouselNext className="h-12 bg-[#EFEFEF] hover:bg-[#3D5AF1]" />
           </Carousel>
         </div>
       </div>

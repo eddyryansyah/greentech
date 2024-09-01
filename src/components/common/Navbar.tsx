@@ -19,7 +19,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
   return (
     <nav
       className={clsx(
-        "w-full flex justify-between items-center p-4 font-bold",
+        "w-full flex justify-between items-center p-4 px-16 font-bold",
         className
       )}
     >
@@ -39,6 +39,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
                   variant={isActive ? "underlined" : "default"}
                   isActive={isActive}
                   to={btn.to}
+                  className="text-xl"
                 >
                   {btn.title}
                 </Button>
