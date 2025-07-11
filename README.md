@@ -4,4 +4,4 @@ Repositori ini merupakan proyek lomba yang dikembangkan bersama:
 - [Ridho Alamsyah](https://github.com/ridhoalamsyah22)
 - [Muhammad Ibrah Bayuara](https://github.com/Bayuara)
 
-Kami berkolaborasi dalam pengembangan ide dan implementasi untuk kompetisi berbasis teknologi ramah lingkungan.
+Kami berkolaborasi dalam pengembangan ide dan implementasi program ini untuk kompetisi berbasis teknologi ramah lingkungan.
